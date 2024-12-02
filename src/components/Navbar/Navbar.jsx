@@ -5,7 +5,7 @@ import { TbPhoneCall } from "react-icons/tb";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center  px-12 py-5 container mx-auto z-20">
+    <div className="flex justify-between items-center  px-12 py-5 container mx-auto z-40">
       <Logo />
       <div className="flex items-center gap-x-6 text-whiteText">
         <Link className="font-semibold text-whiteText hover:text-zinc-300">
