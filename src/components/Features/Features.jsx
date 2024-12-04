@@ -1,12 +1,17 @@
-import React from "react";
-import { TbShieldFilled, TbHelpCircleFilled } from "react-icons/tb";
-import { RiVerifiedBadgeFill } from "react-icons/ri";
-import { PiSpeedometerFill } from "react-icons/pi";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
+import { features } from "~/data/data";
 
 const Features = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <div className="container mx-auto flex flex-col items-start w-full text-white gap-4 py-5">
+    <div
+      ref={ref}
+      className="container mx-auto flex flex-col items-start w-full text-white gap-4 py-5"
+    >
       <h1 className="text-5xl font-semibold">Neden İnovbest?</h1>
       <p className="text-neutral-500">
         İnovbest, işletmelerin dijital dönüşüm süreçlerinde ihtiyaç duyduğu tüm
@@ -15,36 +20,24 @@ const Features = () => {
         sunmayı hedefler.
       </p>
       <div className="w-full grid grid-cols-3 gap-5">
-        <div className="border border-neutral-600 rounded-xl p-5 flex items-start flex-col gap-2">
-          <span className="rounded-full p-2 bg-neutral-700 flex items-center gap-x-2 justify-center">
-            <RiVerifiedBadgeFill size={20} />
-          </span>
-          <h2 className="text-lg font-semibold">Kaliteli Hizmet</h2>
-          <p className="text-neutral-500">
-            İnovbest, işletmelerin dijital dönüşüm süreçlerinde ihtiyaç duyduğu
-            tüm hizmetleri bir arada sunar.
-          </p>
-        </div>
-        <div className="border border-neutral-600 rounded-xl p-5 flex items-start flex-col gap-2">
-          <span className="rounded-full p-2 bg-neutral-700 flex items-center gap-x-2 justify-center">
-            <TbShieldFilled size={20} />
-          </span>
-          <h2 className="text-lg font-semibold">Güvenilir Hizmet</h2>
-          <p className="text-neutral-500">
-            İnovbest, güvenilir hizmet anlayışı ile işletmelerin dijital dönüşüm
-            süreçlerinde ihtiyaç duyduğu tüm hizmetleri bir arada sunar.
-          </p>
-        </div>
-        <div className="border border-neutral-600 rounded-xl p-5 flex items-start flex-col gap-2">
-          <span className="rounded-full p-2 bg-neutral-700 flex items-center gap-x-2 justify-center">
-            <PiSpeedometerFill size={20} />
-          </span>
-          <h2 className="text-lg font-semibold">Hızlı Hizmet</h2>
-          <p className="text-neutral-500">
-            İnovbest, hızlı hizmet anlayışı ile işletmelerin dijital dönüşüm
-            süreçlerinde ihtiyaç duyduğu tüm hizmetleri bir arada sunar.
-          </p>
-        </div>
+        {features.map((feature, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.3,
+            }}
+            className="border border-neutral-600 rounded-xl p-5 flex items-start flex-col gap-2"
+          >
+            <span className="rounded-full p-2 bg-neutral-700 flex items-center gap-x-2 justify-center">
+              <feature.icon />
+            </span>
+            <h2 className="text-lg font-semibold">{feature.title}</h2>
+            <p className="text-neutral-500">{feature.description}</p>
+          </motion.div>
+        ))}
       </div>
       <div className="w-full flex justify-center items-center p-3">
         <Link className="bg-whiteText text-[#202020] px-4 py-2 rounded-xl font-semibold">
