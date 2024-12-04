@@ -18,7 +18,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: -100, rotate: 45 }}
           animate={{ opacity: 1, x: 0, rotate: 0 }}
           transition={{ duration: 1 }}
-          className="absolute left-24 top-80 cursor-grab max-w-32"
+          className="absolute left-24 top-80 cursor-grab max-w-32 z-30"
         />
         <motion.img
           drag
@@ -27,14 +27,14 @@ const Hero = () => {
           initial={{ opacity: 0, x: 100, rotate: 45 }}
           animate={{ opacity: 1, x: 0, rotate: 0 }}
           transition={{ duration: 1 }}
-          className="absolute right-12 top-12 cursor-grab max-w-32"
+          className="absolute right-12 top-12 cursor-grab max-w-32 z-30"
         />
       </div>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="w-full flex justify-center items-center flex-col"
+        className="flex justify-center items-center flex-col z-20 "
       >
         <h1 className="text-[100px] bg-clip-text text-transparent bg-gradient-to-r from-[#000] to-[#7c7c7c] font-semibold tracking-tighter mt-24">
           {"< İşletmeler için en iyi hizmet />"}
