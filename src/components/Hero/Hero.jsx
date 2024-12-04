@@ -1,15 +1,20 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import homeShape from "~/assets/homeshape.svg";
 import homeShape2 from "~/assets/homeshape2.svg";
+import { Snowfall } from "react-snowfall";
+import { useSelector } from "react-redux";
 
 const Hero = () => {
   const constraintsRef = useRef(null);
 
+  const { snow } = useSelector((state) => state.snow);
+
   return (
     <div className="w-full flex flex-col gap-4 justify-start items-center z-20 h-screen bg-homeBg bg-top bg-cover relative overflow-hidden">
+      {snow && <Snowfall snowflakeCount={200} color="#f1f1f1" />}
       <div ref={constraintsRef} className="w-full h-full absolute top-0 left-0">
         <motion.img
           drag
