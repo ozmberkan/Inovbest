@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Features = () => {
   return (
     <div className="container mx-auto flex flex-col items-start w-full text-white gap-4 py-5">
-      <h1 className="text-5xl font-semibold">Neden Inovbest?</h1>
+      <h1 className="text-5xl font-semibold">Neden İnovbest?</h1>
       <p className="text-neutral-500">
         İnovbest, işletmelerin dijital dönüşüm süreçlerinde ihtiyaç duyduğu tüm
         hizmetleri bir arada sunar. İşletmelerin ihtiyaçlarına özel çözümler

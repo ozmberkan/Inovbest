@@ -23,46 +23,43 @@ const Footer = () => {
         <div className="w-full grid grid-cols-4 gap-5 py-5">
           <div className="flex flex-col">
             <h1 className="uppercase text-base mb-3 font-semibold text-white">
-              Company
+              Hakkımızda
             </h1>
             <ul className="flex flex-col text-sm gap-y-2 text-zinc-300">
-              <li>About Us</li>
-              <li>Jobs</li>
-              <li>Press</li>
-              <li>Blog</li>
+              <li>Bizi Tanıyın</li>
+              <li>Müşterilerimiz</li>
+              <li>Vizyonumuz</li>
+              <li>Misyonumuz</li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col">
+            <h1 className="uppercase text-base mb-3 font-semibold text-white">
+              Politikalar
+            </h1>
+            <ul className="flex flex-col text-sm gap-y-2 text-zinc-300">
+              <li>Çerez Politikası</li>
+              <li>Gizlilik Politikası</li>
+              <li>Kişisel Verilerin Korunması</li>
             </ul>
           </div>
           <div className="flex flex-col">
             <h1 className="uppercase text-base mb-3 font-semibold text-white">
-              Company
+              Sosyal
             </h1>
             <ul className="flex flex-col text-sm gap-y-2 text-zinc-300">
-              <li>About Us</li>
-              <li>Jobs</li>
-              <li>Press</li>
-              <li>Blog</li>
+              <li>Instagram</li>
+              <li>LinkedIn</li>
+              <li>YouTube</li>
             </ul>
           </div>
           <div className="flex flex-col">
             <h1 className="uppercase text-base mb-3 font-semibold text-white">
-              Company
+              İletişim
             </h1>
             <ul className="flex flex-col text-sm gap-y-2 text-zinc-300">
-              <li>About Us</li>
-              <li>Jobs</li>
-              <li>Press</li>
-              <li>Blog</li>
-            </ul>
-          </div>
-          <div className="flex flex-col">
-            <h1 className="uppercase text-base mb-3 font-semibold text-white">
-              Company
-            </h1>
-            <ul className="flex flex-col text-sm gap-y-2 text-zinc-300">
-              <li>About Us</li>
-              <li>Jobs</li>
-              <li>Press</li>
-              <li>Blog</li>
+              <li>Şehitler Mah. Kamil Su Cad. No: 5/7A Şehzadeler MANİSA</li>
+              <li>0236 238 31 01</li>
             </ul>
           </div>
         </div>
