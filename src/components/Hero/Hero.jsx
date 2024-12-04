@@ -15,19 +15,19 @@ const Hero = () => {
           drag
           dragConstraints={constraintsRef}
           src={homeShape}
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100, rotate: 45 }}
+          animate={{ opacity: 1, x: 0, rotate: 0 }}
           transition={{ duration: 1 }}
-          className="absolute left-12 bottom-80 cursor-grab"
+          className="absolute left-24 top-80 cursor-grab max-w-32"
         />
         <motion.img
           drag
           dragConstraints={constraintsRef}
           src={homeShape2}
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 100, rotate: 45 }}
+          animate={{ opacity: 1, x: 0, rotate: 0 }}
           transition={{ duration: 1 }}
-          className="absolute right-6 top-12 cursor-grab"
+          className="absolute right-12 top-12 cursor-grab max-w-32"
         />
       </div>
       <motion.div
