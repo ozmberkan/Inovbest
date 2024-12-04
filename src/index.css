@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply font-inter bg-[#202020];
+  @apply font-inter bg-[#262626];
 }

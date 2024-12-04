@@ -1,10 +1,3 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-
-const colors = require("tailwindcss/colors");
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -17,18 +10,10 @@ export default {
         whiteText: "#f1f1f1",
         grayBorder: "#2b2b2b",
       },
+      backgroundImage: {
+        homeBg: "url('/src/assets/homeBg.svg')",
+      },
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [],
 };
-
-function addVariablesForColors({ addBase, theme }) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
-
-  addBase({
-    ":root": newVars,
-  });
-}
