@@ -13,6 +13,7 @@ const Contact = () => {
   return (
     <form
       ref={ref}
+      id="contact"
       className="container mx-auto flex flex-col items-center w-full text-white gap-4 py-[100px] relative  "
     >
       <motion.div

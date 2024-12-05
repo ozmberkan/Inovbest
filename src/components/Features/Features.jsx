@@ -40,7 +40,7 @@ const Features = () => {
         ))}
       </div>
       <div className="w-full flex justify-center items-center p-3">
-        <Link className="bg-whiteText text-[#202020] px-4 py-2 rounded-xl font-semibold">
+        <Link className="bg-whiteText text-[#202020] px-4 py-2 rounded-xl font-semibold hover:ring-2 ring-offset-2 ring-offset-[#202020] ring-white transition-all duration-300">
           Daha fazla
         </Link>
       </div>

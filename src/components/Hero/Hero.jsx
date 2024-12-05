@@ -51,9 +51,12 @@ const Hero = () => {
           sürdürülebilir bir dünya yaratabileceğimize inanıyoruz.
         </p>
         <div className="flex justify-between items-center gap-x-5 mt-5">
-          <Link className="bg-[#202020] hover:ring-2 ring-offset-2 ring-[#202020] border-grayBorder border-2 text-whiteText hover:border-zinc-700 transition-all duration-300 px-4 py-2 rounded-xl font-semibold">
+          <a
+            href="#contact"
+            className="bg-[#202020] hover:ring-2 ring-offset-2 ring-[#202020] border-grayBorder border-2 text-whiteText hover:border-zinc-700 transition-all duration-300 px-4 py-2 rounded-xl font-semibold"
+          >
             İletişim
-          </Link>
+          </a>
           <Link className="bg-[#202020] hover:ring-2 ring-offset-2 ring-[#202020] border-grayBorder border-2 text-whiteText hover:border-zinc-700 transition-all duration-300 px-4 py-2 rounded-xl font-semibold">
             Bizi Tanıyın
           </Link>
